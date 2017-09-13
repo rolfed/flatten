@@ -1,6 +1,3 @@
-/*
- * Revealing Module Pattern
- */
 var Exposer = (function(){
     return {
 

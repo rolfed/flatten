@@ -80,6 +80,13 @@ function Truck(model, make){
     this.make = make;
     this.doors = 2;
     this.fourWheelDrive = true;
+    this.openCar = false;
+    this.open = function(){
+        this.openCar = true;
+        if(this.openCar){
+            console.log('The door is open');
+        }
+    }
 }
 
 function Van(model, make){
@@ -112,5 +119,17 @@ sprinter.gallons = 400;
 
 console.log('\n\nSprinter: ', sprinter);
 sprinter.calcMpg();
+
+var tacoma = new Truck('Toyota', 'Tacoma');
+
+tacoma.year = '2017';
+tacoma.color = 'Black';
+tacoma.type ='Truck',
+tacoma.miles = 18;
+tacoma.gallons = 400;
+
+console.log('\n\nTacoma: ', tacoma);
+tacoma.calcMpg();
+tacoma.open();
 
 
